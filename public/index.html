@@ -8,6 +8,11 @@
 </head>
 <body>
     <div id="app">
+        <form v-on:submit.prevent="saveNewChore">
+            <label for="new-chore">Add new chore:</label>
+            <input id="new-chore" type="text" v-model="newChore" />
+            <input type="submit" value="Save" />
+        </form>
         <ul>
             <li v-for="chore in toDoList">{{ chore }}</li>
         </ul>
