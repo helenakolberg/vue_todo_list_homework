@@ -4,13 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
     new Vue({
         el: "#app",
         data: {
-            toDoList: ['Food shop', 'Homework', 'Walk the dogs'],
+            toDoList: [
+                { name: 'Food shop', priority: 'high'},
+                { name: 'Laundry', priority: 'low' },
+                { name: 'Homework', priority: 'high' }
+            ],
             newChore: ''
         },
         methods: {
             saveNewChore: function () {
-                this.toDoList.push(this.newChore);
-                this.newChore = ''
+                this.toDoList.push({
+                    name: this.newChore,
+                    priority: 'high'
+                });
+                this.newChore = '';
             }
         }
     });
