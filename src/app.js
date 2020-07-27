@@ -26,6 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             changeToLow: function (index) {
                 this.toDoList[index].priority = 'low';
+            },
+
+            changeToHigh: function (index) {
+                this.toDoList[index].priority = 'high';
             }
         }
     });
