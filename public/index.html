@@ -33,6 +33,7 @@
                 <button class="button-item" v-if="chore.priority != 'done'" v-on:click="tickChore(index)">Done</button>
                 <button class="button-item" v-if="chore.priority === 'high'" v-on:click="changeToLow(index)">Change priority</button>
                 <button class="button-item" v-if="chore.priority === 'low'" v-on:click="changeToHigh(index)">Change priority</button>
+                <button class="button-item" v-on:click="removeChore(index)">Remove</button>
             </li>
         </ul>
     </div>

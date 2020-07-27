@@ -30,6 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             changeToHigh: function (index) {
                 this.toDoList[index].priority = 'high';
+            },
+
+            removeChore: function (index) {
+                this.toDoList.splice(index, 1);
             }
         }
     });
