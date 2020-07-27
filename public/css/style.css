@@ -1,0 +1,14 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.high {
+    border: 2px solid #ff0000;
+}
+
+.low {
+    border: 2px solid #16be00;
+}
