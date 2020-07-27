@@ -10,23 +10,29 @@
 <body>
     <div id="app">
         <form v-on:submit.prevent="saveNewChore">
-            <label for="new-chore">Add new chore:</label>
-            <input id="new-chore" type="text" v-model="newChore" required />
-            <label for="priority">Priority:</label>
-            <input type="radio" id="high-priority" name="priority" value="high" v-model="setPriority" required />
-            <label for="high">High</label>
-            <input type="radio" id="low-priority" name="priority" value="low" v-model="setPriority" />
-            <label for="low">Low</label>
-            <input type="submit" value="Save" />
+            <div class="form-item">
+                <label for="new-chore">Add new chore:</label>
+                <input id="new-chore" type="text" v-model="newChore" required />
+            </div>
+            <div class="form-item">
+                <label for="priority">Priority:</label>
+                <input type="radio" id="high-priority" name="priority" value="high" v-model="setPriority" required />
+                <label for="high" class="high-pri">High</label>
+                <input type="radio" id="low-priority" name="priority" value="low" v-model="setPriority" />
+                <label for="low" class="low-pri">Low</label>
+            </div>
+            <div class="form-item">
+                <input type="submit" value="Save" />
+            </div>
         </form>
         <ul>
             <li 
             v-for="(chore, index) in toDoList"
             v-bind:class="(chore.priority === 'high') ? ('high') : (chore.priority === 'low') ? ('low') : ('done')">
                 {{ chore.name }}
-                <button class="done-button" v-if="chore.priority != 'done'" v-on:click="tickChore(index)">Done</button>
-                <button v-if="chore.priority === 'high'" v-on:click="changeToLow(index)">Change priority</button>
-                <button v-if="chore.priority === 'low'" v-on:click="changeToHigh(index)">Change priority</button>
+                <button class="button-item" v-if="chore.priority != 'done'" v-on:click="tickChore(index)">Done</button>
+                <button class="button-item" v-if="chore.priority === 'high'" v-on:click="changeToLow(index)">Change priority</button>
+                <button class="button-item" v-if="chore.priority === 'low'" v-on:click="changeToHigh(index)">Change priority</button>
             </li>
         </ul>
     </div>

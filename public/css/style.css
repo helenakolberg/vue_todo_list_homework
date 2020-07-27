@@ -4,10 +4,29 @@ body {
 
 form {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 50px 20px 20px;
     background-color: #4d4d4d;
     color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.form-item {
+    margin: 15px;
+}
+
+.high-pri {
+    color: #b40000;
+    background-color: #ffffff;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.low-pri {
+    color: #129201;
+    background-color: #ffffff;
+    font-weight: bold;
+    padding: 3px;
 }
 
 input[type="submit"], input[type="submit"]:visited, input[type="submit"]:active {
@@ -40,11 +59,10 @@ ul {
 }
 
 li {
-    width: 220px;
+    width: 370px;
     text-align: center;
     font-size: 20px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 10px;
     margin: 8px;
     text-transform: uppercase;
     font-weight: bold;
@@ -69,7 +87,7 @@ li {
     color: #4d4d4d;
 }
 
-.done-button {
+.button-item:hover {
     cursor: pointer;
     background-color: transparent;
     color: #ffffff;
@@ -79,11 +97,13 @@ li {
     margin-bottom: 5px;
 }
 
-.done-button:hover {
+.button-item {
     border: 3px solid #ffffff;
     background-color: #ffffff;
     color: #4d4d4d;
     text-transform: uppercase;
     font-weight: bold;
     outline: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
