@@ -12,9 +12,9 @@
             <label for="new-chore">Add new chore:</label>
             <input id="new-chore" type="text" v-model="newChore" />
             <label for="priority">Priority:</label>
-            <input type="radio" id="high-priority" v-model="setPriority" />
+            <input type="radio" id="high-priority" name="priority" value="high" v-model="setPriority" />
             <label for="high">High</label>
-            <input type="radio" id="low-priority" v-model="setPriority" />
+            <input type="radio" id="low-priority" name="priority" value="low" v-model="setPriority" />
             <label for="low">Low</label>
             <input type="submit" value="Save" />
         </form>

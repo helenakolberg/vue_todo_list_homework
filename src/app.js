@@ -9,16 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: 'Laundry', priority: 'low' },
                 { name: 'Homework', priority: 'high' }
             ],
-            newChore: ''
+            newChore: '',
+            setPriority: ''
         },
         methods: {
             saveNewChore: function () {
                 this.toDoList.push({
                     name: this.newChore,
-                    priority: 'high'
+                    priority: this.setPriority
                 });
                 this.newChore = '';
-            }
+            },
         }
     });
 });
