@@ -19,16 +19,18 @@ form {
     color: #ffffff;
     background-color: #b40000;
     font-weight: bold;
-    padding: 3px;
+    padding: 4px;
     border-radius: 6px;
+    font-size: 14px;
 }
 
 .low-pri {
     color: #ffffff;
     background-color: #129201;
     font-weight: bold;
-    padding: 3px;
+    padding: 4px;
     border-radius: 6px;
+    font-size: 14px;
 }
 
 input[type="submit"], input[type="submit"]:visited, input[type="submit"]:active {
