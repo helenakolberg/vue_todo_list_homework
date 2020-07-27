@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 this.newChore = '';
             },
+            tickChore: function (index) {
+                this.toDoList[index].priority = 'done';
+            }
         }
     });
 });
