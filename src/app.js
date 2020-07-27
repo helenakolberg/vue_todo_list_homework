@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             tickChore: function (index) {
                 this.toDoList[index].priority = 'done';
+            },
+
+            changeToLow: function (index) {
+                this.toDoList[index].priority = 'low';
             }
         }
     });

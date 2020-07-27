@@ -25,6 +25,7 @@
             v-bind:class="(chore.priority === 'high') ? ('high') : (chore.priority === 'low') ? ('low') : ('done')">
                 {{ chore.name }}
                 <button class="done-button" v-if="chore.priority != 'done'" v-on:click="tickChore(index)">Done</button>
+                <button v-if="chore.priority === 'high'" v-on:click="changeToLow(index)">Change priority</button>
             </li>
         </ul>
     </div>
