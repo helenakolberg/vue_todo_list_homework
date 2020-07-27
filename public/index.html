@@ -11,9 +11,9 @@
     <div id="app">
         <form v-on:submit.prevent="saveNewChore">
             <label for="new-chore">Add new chore:</label>
-            <input id="new-chore" type="text" v-model="newChore" />
+            <input id="new-chore" type="text" v-model="newChore" required />
             <label for="priority">Priority:</label>
-            <input type="radio" id="high-priority" name="priority" value="high" v-model="setPriority" />
+            <input type="radio" id="high-priority" name="priority" value="high" v-model="setPriority" required />
             <label for="high">High</label>
             <input type="radio" id="low-priority" name="priority" value="low" v-model="setPriority" />
             <label for="low">Low</label>
