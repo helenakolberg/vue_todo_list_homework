@@ -16,17 +16,19 @@ form {
 }
 
 .high-pri {
-    color: #b40000;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #b40000;
     font-weight: bold;
     padding: 3px;
+    border-radius: 6px;
 }
 
 .low-pri {
-    color: #129201;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #129201;
     font-weight: bold;
     padding: 3px;
+    border-radius: 6px;
 }
 
 input[type="submit"], input[type="submit"]:visited, input[type="submit"]:active {
@@ -53,13 +55,13 @@ input[type="text"] {
 ul {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     list-style-type: none;
     padding: 0px;
     margin: 20px;
 }
 
 li {
-    width: 370px;
     text-align: center;
     font-size: 20px;
     padding: 10px;
@@ -82,9 +84,9 @@ li {
 }
 
 .done {
-    border: 3px solid #4d4d4d;
-    background-color: #ffffff;
-    color: #4d4d4d;
+    border: 3px solid #7e7e7e;
+    background-color: #b9b9b9;
+    color: #ebebeb;
 }
 
 .button-item:hover {
